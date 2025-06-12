@@ -183,6 +183,7 @@ class ReportController extends AppBaseController
             'totalMinutes' => $duration,
         ];
 
+        
         return view('reports.show', compact('invoiceId', 'invoiceStatus'))->with($data);
     }
 

@@ -97,7 +97,8 @@ class UserController extends AppBaseController
      */
     public function store(CreateUserRequest $request)
     {
-        dd($request->all());
+        // dd($request->all()); // ← Désactive cette ligne une fois le debug terminé
+
         $input = $request->all();
         $input['salary'] = (! empty($input['salary']) ? removeCommaFromNumbers($input['salary']) : null);
 

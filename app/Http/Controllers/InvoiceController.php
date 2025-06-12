@@ -223,7 +223,7 @@ class InvoiceController extends AppBaseController
 
         $pdf = PDF::loadView("invoices.invoice_template_pdf.$invoiceTemplate", $data);
 
-        return $pdf->stream($invoice->name.'.pdf');
+        return $pdf->download($invoice->name.'.pdf');
     }
 
     /**
